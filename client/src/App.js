@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 import axios from 'axios'
+import PostList from './PostList'
 
 export default class App extends React.Component { 
   constructor() {
@@ -24,17 +25,8 @@ render() {
     return(
     <div className="App">
       <div>
-        <ListGroup>
-        {this.state.posts.map(post => {
-          return(
-        <ListGroupItem>
-          Post title: {post.title}
-        </ListGroupItem>
-              )
-            }
-          )
-        }
-        </ListGroup>
+        <br></br>
+        <PostList posts={this.state.posts} />
       </div>
     </div>
     )
